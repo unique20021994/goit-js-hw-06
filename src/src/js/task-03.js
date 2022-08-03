@@ -16,10 +16,12 @@ const images = [
 
 const galleryList = document.querySelector('.gallery');
 const createGalleryItem = ({ url, alt }) =>
-  `<li><img src = "${url} alt = ${alt} width = 150 ></li>`;
+  `<li><img src = "${url}" alt = "${alt}" width = "250" ></li>`;
 const galleryMarkup = images.reduce(
   (acc, item) => acc + createGalleryItem(item),
-  ''
+  ""
 );
+console.log(galleryMarkup);
+
 galleryList.insertAdjacentHTML('afterbegin', galleryMarkup);
 galleryList.setAttribute('style', 'list-style:none', 'display:flex');
